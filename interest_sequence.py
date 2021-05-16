@@ -398,7 +398,7 @@ def interest_sequence(df_train, df_test, mode, alpha, K):
         print("Recall: ", recall)
         print("F-Score: ", F_score)
         print("-" * 50)
-    # print(str(rmse) + "\t" + str(mae) + "\t" + str(precision) + "\t" + str(recall) + "\t" + str(F_score))
+        # print(str(rmse) + "\t" + str(mae) + "\t" + str(precision) + "\t" + str(recall) + "\t" + str(F_score))
 
 
 if __name__ == "__main__":
@@ -408,6 +408,5 @@ if __name__ == "__main__":
     # Hyper parameters
     K = 5
     alpha = 0.1
-    while alpha <= 1:
-        interest_sequence(df_train, df_test, mode, alpha, K)
-        alpha = alpha + 0.1
+    # Do the experiment
+    interest_sequence(df_train, df_test, mode, alpha, K)
